@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -148,7 +151,7 @@ margin-right: 20px;
     width: 100%;
     height: 100%;
     top: 228px;
-    left: 0px;
+    left: 180px;
     background: url(/images/bg-group.png);
   background-repeat: no-repeat;
   z-index: -1;
@@ -266,6 +269,8 @@ border-radius: 8px;
 }
 
 .chef {
+  position: relative;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -320,6 +325,7 @@ border-radius: 5px;
     padding: 30px 50px;
     background: #FED84C;
 border-radius: 8px;
+z-index: 3;
   }
   &__images {
     width: 100%;
@@ -513,6 +519,7 @@ height: 156px;
       border: 1px solid #F2F6FA;
 border-radius: 100%;
 margin-bottom: 30px;
+
     }
     &-img img {
       max-width: 380px;
@@ -636,7 +643,7 @@ margin-bottom: 30px;
 border-radius: 8px;
 padding: 70px 99px;
 z-index: 1;
- &::after {
+  &::after {
   content: '';
   position: absolute;
   top: 55%;
@@ -708,4 +715,408 @@ z-index: 2;
     display: flex;
     align-items: center;
   }
+  .header-block-address {
+    margin-right: 10px;
+  }
 }
+
+// ------------------POPUP-------------------------------
+.chef__popup.chef__popup--open {
+  transform: scale(1);
+  z-index: 100;
+}
+.scroll {
+  overflow: hidden;
+}
+.chef__popup {
+  max-height: 500px;
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  right: 0;
+  bottom: 0;
+  width: 700px;
+  transform: scale(0);
+  transition: all .5s;
+  &-tel {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  &-title {
+    margin-top: 20px;
+    text-align: center;
+    margin: 20px 0;
+    color: #081130;
+    font-size: 28px;
+  }
+  &-btn {
+    padding: 20px 25px;
+    border: 1px solid #2E363E;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  & textarea {
+    background-color: #aedeed58;
+    border: 1px solid #2E363E;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    max-width: 320px;
+    }
+ & form {
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FED84C;
+  border-radius: 8px;
+  border: 1px solid #2E363E;
+}
+}
+.chef__popup-2 {
+  background-color: #FED84C;
+  border-radius: 8px;
+  border: 1px solid #2E363E;
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  height: 200px;
+  transform: scale(0);
+  transition: all .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chef__popup-2--open {
+  transform: scale(1);
+
+}
+.chef__popup-3 {
+  z-index: 100;
+  background-color: #FED84C;
+  border-radius: 8px;
+  border: 1px solid #2E363E;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  height: 200px;
+  transform: scale(0);
+  transition: all .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chef__popup-3--open {
+  transform: scale(1);
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.314);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+
+}
+.overlay--show {
+  visibility: visible;
+  opacity: 1;
+}
+// --------------MEDIA-------------------------------
+// ----------------------1546----------------------------------
+@media (max-width:1536px) {
+  .photo__wrapper {
+    justify-content: start;
+  }
+  .photo__inner {
+    padding-left: 0;
+  }
+  .chef .chef__img-bio {
+top: 400px;
+}
+.chef__info {
+  margin-top: 80px;
+}
+.chef__btn {
+  margin-bottom: 40px;
+}
+.slick-prev {
+left: 40%;
+}
+.slick-next {
+  right: 40%;
+  }
+  .chef__popup {
+    top: 25%;
+    left: 15%;
+    right: 0;
+    bottom: 0;
+  }
+}
+// ----------------------1053----------------------------------
+@media (max-width:1053px) {
+  .reviews__slider  {
+    padding: 70px;
+  }
+  .footer__inner-forma-block {
+    flex-direction: column;
+  }
+  .footer__inner-forma-tel {
+    margin-bottom: 10px;
+  }
+  .chef__popup-3 {
+    top: 35%;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+  }
+}
+// ----------------------946----------------------------------
+@media (max-width:946px) {
+  .cookies__inner {
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+  }
+  .chef__inner {
+    flex-direction: column;
+  }
+  .chef__img {
+    order: 1;
+  }
+  .chef__info {
+    order: 2;
+  }
+  .chef .chef__img-bio {
+    top: 90%;
+    bottom: 90%;
+    left: 50%;
+  }
+  .reviews__slider  {
+    padding: 30px;
+  }
+  .reviews__slide-text {
+    font-size: 22px;
+  }
+  .reviews__slide-description {
+    font-size: 12px;
+  }
+  .reviews__slide-info-img {
+    width: 100%;
+  }
+  .slick-prev {
+    left: 35%;
+    }
+    .slick-next {
+      right: 35%;
+      }
+      .chef__popup {
+  width: 600px;
+        top: 25%;
+        left: 25%;
+        right: 0;
+        bottom: 0;
+      }
+}
+// ----------------------676----------------------------------
+@media (max-width:676px) {
+  .header__inner-top {
+    flex-direction: column;
+    justify-items: start;
+  }
+  .header__inner-top-block {
+    margin-top: 20px;
+  }
+  .header-bottom-title {
+font-size: 32px;
+}
+.header-bottom-description {
+font-size: 18px;
+}
+.header-bottom {
+  text-align: center;
+}
+.cookies__title {
+  font-size: 36px;
+  line-height: 36px;
+}
+.cookies__inner {
+ display: flex;
+ flex-direction: column;
+ max-width: 380px;
+ margin: 0 auto;
+}
+.cookies__inner-title,
+.cookies__inner-description,
+.cookies__inner-price,
+.cookies__inner-link {
+  margin-left: 0;
+}
+.chef .chef__img-bio {
+  top: 80%;
+  bottom: 90%;
+  left: 40%;
+}
+.chef__title {
+  font-size: 30px;
+  line-height: 45px;
+}
+.reviews__slide-inner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reviews__slide-content {
+  margin-right: 0;
+}
+.reviews__slide-info-img {
+  width: 100%;
+  height: auto;
+}
+.reviews__slide-info {
+  margin-top: 30px;
+}
+.slick-prev {
+  left: 28%;
+  }
+  .slick-next {
+    right: 28%;
+    }
+    .galerry__title {
+      font-size: 38px;
+    }
+    .galerry__images {
+      grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+    }
+    .footer__inner {
+      padding: 40px;
+    }
+    .footer__inner-forma-tel {
+      padding: 32px 90px 29px 58px;
+    }
+    .chef__popup {
+      z-index: 100;
+      max-width: 400px;
+            top: 25%;
+            left: 5%;
+            right: 0;
+            bottom: 0;
+          }
+}
+
+
+// ----------------------471----------------------------------
+@media (max-width:471px) {
+  .header__inner-top-block {
+    display: block;
+    text-align: center;
+  }
+  .header-block-address {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .header-bottom-btn {
+    flex-direction: column;
+  }
+  .header-bottom-text {
+    margin-top: 40px;
+  }
+  .header-bottom-title {
+    line-height: 44px;
+    font-size: 22px;
+    }
+    .header-bottom-button-link {
+      margin: 0;
+      padding: 25px 45px;
+    }
+    .cookies__title {
+      font-size: 25px;
+    }
+    .photo__inner-title {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    .photo__inner-description {
+      font-size: 17px;
+    }
+    .photo__inner-button {
+      padding: 20px 25px;
+    }
+    .chef .chef__img-bio {
+      top: 80%;
+      bottom: 90%;
+      left: 0%;
+    }
+    .chef__title {
+      font-size: 26px;
+    }
+    .chef__btn-link {
+      padding: 25px 35px;
+    }
+    .slick-prev {
+      left: 23%;
+      }
+    .slick-next {
+      right: 23%;
+      }
+      .galerry__title {
+        font-size: 29px;
+        line-height: 45px;
+      }
+      .galerry__images {
+        grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr;
+      }
+      .footer__inner {
+
+      }
+      .footer__inner-title {
+        font-size: 24px;
+      }
+      .footer__inner-text {
+        font-size: 16px;
+      }
+      .footer__inner-forma-tel {
+        padding: 32px 45px 29px 15px;
+    }
+    .footer__inner-forma-button {
+      padding: 20px 80px;
+  }
+  .footer__info {
+    flex-direction: column;
+  }
+  .footer__info-btn {
+    margin: 0;
+  }
+  .chef__popup {
+    z-index: 100;
+    width: 280px;
+          top: 25%;
+          left: 5%;
+          right: 0;
+          bottom: 0;
+        }
+        .chef__popup textarea {
+          max-width: 200px;
+        }
+        .chef__popup-3 {
+          width: 300px;
+          top: 35%;
+          left: 5%;
+          right: 0;
+          bottom: 0;
+        }
+}
+

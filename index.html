@@ -17,6 +17,7 @@
 
 <body>
   <div class="wrapper">
+    <div class="overlay"></div>
     <header class="header">
       <div class="header-row"></div>
       <div class="container">
@@ -37,14 +38,14 @@
         </div>
         <div class="header-bottom">
           <div class="header-bottom-subtitle">
-            <a href="" class="header-bottom-link">вкуснейшие</a>
+            <a href="#menu" class="header-bottom-link">вкуснейшие</a>
           </div>
           <h2 class="header-bottom-title">Пирожные и капкейки от 150 ₽/шт. c доставкой по Санкт Петербургу</h2>
           <p class="header-bottom-description">Приготовим за 3 часа в день заказа.</p>
           <p class="header-bottom-description">Доставка на авто в холодильнике.</p>
           <div class="header-bottom-btn">
             <div class="header-bottom-button">
-              <a href="" class="header-bottom-button-link">Перейти в каталог</a>
+              <a href="#menu" class="header-bottom-button-link">Перейти в каталог</a>
             </div>
             <div class="header-bottom-text">9 различных <br> видов на выбор</div>
           </div>
@@ -52,7 +53,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="cookies">
+      <section id="menu" class="cookies">
         <div class="cookies__bg"></div>
         <div class="container">
           <h2 class="cookies__title">Для любых событий и дорогих вам людей </h2>
@@ -184,6 +185,20 @@
               </div>
             </div>
           </div>
+          <div class="chef__popup">
+            <form action="">
+              <h3 class="chef__popup-title">Задайте свой вопрос</h3>
+              <input class="chef__popup-tel" type="tel" placeholder="Введите номер телефона">
+              <label for=""></label>
+              <textarea name="question" id="" cols="40" rows="20">Введите свой вопрос</textarea>
+              <button class="chef__popup-btn">Отправить</button>
+            </form>
+          </div>
+          <div class="chef__popup-2">
+            <form action="">
+              <h3 class="chef__popup-title">Спасибо за вопрос, скоро мы ответим вам на ваш вопрос</h3>
+            </form>
+          </div>
         </div>
       </section>
       <section class="reviews">
@@ -305,6 +320,12 @@
             </div>
           </form>
         </div>
+        <div class="chef__popup-3">
+          <form action="">
+            <h3 class="chef__popup-title">Cкоро мы вам перезвоним</h3>
+          </form>
+        </div>
+
         <div class="footer__info">
           <div class="footer__info-btn">
             <a href="" class="footer__info-link">Согласие на обработку данных</a>
