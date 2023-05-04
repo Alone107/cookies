@@ -408,28 +408,6 @@ background: #F2F6FA;
 .reviews {
   background: #081130;
   position: relative;
-  &::after {
-    content: '';
-    width: 335px;
-height: 513px;
-background: url(/images/1\ otziv.png);
-background-size: cover;
-background-repeat: no-repeat;
-position: absolute;
-top: 510px;
-left: -170px;
-  }
-  &::before {
-    content: '';
-    width: 335px;
-height: 513px;
-background: url(/images/1\ otziv-2.png);
-background-size: cover;
-background-repeat: no-repeat;
-position: absolute;
-top: 510px;
-right: -170px;
-  }
   &__bg {
     height: 330px;
     background: url(/images/03\ 1.png);
@@ -458,32 +436,73 @@ right: -170px;
       content: '';
       position: absolute;
       top: -20%;
-      left: -160px;
+      left: 180px;
       width: 170.68px;
 height: 170px;
 background: url(/images/leaf.png);
 background-size: cover;
 background-repeat: no-repeat;
+z-index: 20;
+    }
+    &::after {
+      position: absolute;
+      top: 110px;
+      right: 285px;
+      content: '';
+      background: url(/images/berry.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 152px;
+  height: 156px;
+  z-index: 10;
     }
   }
   &__slider {
+    position: relative;    
+    display: flex;
+    align-items: center;
+    min-width: 0px;
+  }
+  .slick-track {
     position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 0px;
+  }
+
+  &__slider::after {
+
+  }
+  &__slider::after {
+    content: '';
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: #081130;
+    opacity: 0.9;
+    height: 620px;
+    width: 322px;
+    z-index: 10;
+  }
+  &__slider::before {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: #081130;
+    opacity: 0.9;
+    height: 620px;
+    width: 322px;
+    z-index: 10;
+  }
+  &__slide {
     background: #FFFFFF;
     border: 2px solid #E2EAF2;
     box-shadow: 2px 8px 16px rgba(194, 198, 208, 0.06);
 border-radius: 5px;
 padding: 70px 143px;
-  }
-  &__slider::after {
-    position: absolute;
-    top: -25px;
-    right: -70px;
-    content: '';
-    background: url(/images/berry.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 152px;
-height: 156px;
+max-width: 1180px;
+margin: 0 25px;
   }
   &__slide-inner {
     display: flex;
@@ -520,10 +539,12 @@ height: 156px;
 border-radius: 100%;
 margin-bottom: 30px;
 
+
     }
     &-img img {
       max-width: 380px;
       max-height: 380px;
+      width: 100%;
     }
     &-name {
       font-weight: 500;
@@ -539,6 +560,18 @@ margin-bottom: 30px;
       color: #A6AEB6;
     }
   }
+}
+.slick-slider {
+  position: relative;
+
+}
+.slick-slider::after {
+
+}
+.reviews__slider .slick-initialized .slick-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slick-prev {
   position: absolute;
@@ -738,6 +771,8 @@ z-index: 2;
   width: 700px;
   transform: scale(0);
   transition: all .5s;
+  z-index: 150;
+
   &-tel {
     margin-bottom: 30px;
     padding: 10px;
@@ -780,8 +815,8 @@ z-index: 2;
   border-radius: 8px;
   border: 1px solid #2E363E;
   position: fixed;
-  top: 25%;
-  left: 35%;
+  top: 40%;
+  left: 40%;
   right: 0;
   bottom: 0;
   width: 400px;
@@ -791,6 +826,8 @@ z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 150;
+
 }
 .chef__popup-2--open {
   transform: scale(1);
@@ -813,6 +850,7 @@ z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 150;
 }
 .chef__popup-3--open {
   transform: scale(1);

@@ -2,24 +2,23 @@ $('.reviews__slider').slick({
   centerMode: true,
   centerPadding: '0px',
   slidesToShow: 1,
-  slidesToScroll: 3,
-  adaptiveHeight: true,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 768,
       settings: {
+        arrows: false,
         centerMode: true,
         centerPadding: '0px',
-        adaptiveHeight: true,
-        slidesToShow: 1
+        slidesToShow: 3
       }
     },
     {
       breakpoint: 480,
       settings: {
+        arrows: false,
         centerMode: true,
         centerPadding: '0px',
-        adaptiveHeight: true,
         slidesToShow: 1
       }
     }
