@@ -454,25 +454,30 @@ z-index: 20;
       background-repeat: no-repeat;
       width: 152px;
   height: 156px;
-  z-index: 10;
+  z-index: 30;
     }
+  }
+  &__slide {
+
   }
   &__slider {
     position: relative;    
     display: flex;
     align-items: center;
     min-width: 0px;
+    border: 2px solid #E2EAF2;
+    box-shadow: 2px 8px 16px rgba(194, 198, 208, 0.06);
+border-radius: 5px;
+background: #FFFFFF;
   }
   .slick-track {
     position: relative;
     display: flex;
     align-items: center;
     min-width: 0px;
-  }
-
-  &__slider::after {
 
   }
+
   &__slider::after {
     content: '';
     right: 0;
@@ -497,12 +502,10 @@ z-index: 20;
   }
   &__slide {
     background: #FFFFFF;
-    border: 2px solid #E2EAF2;
-    box-shadow: 2px 8px 16px rgba(194, 198, 208, 0.06);
-border-radius: 5px;
 padding: 70px 143px;
 max-width: 1180px;
 margin: 0 25px;
+
   }
   &__slide-inner {
     display: flex;
@@ -564,14 +567,21 @@ margin-bottom: 30px;
 .slick-slider {
   position: relative;
 
+
 }
 .slick-slider::after {
+
+}
+.slick__slide {
+
 
 }
 .reviews__slider .slick-initialized .slick-slider {
   display: flex;
   align-items: center;
   justify-content: center;
+
+
 }
 .slick-prev {
   position: absolute;
@@ -874,7 +884,17 @@ z-index: 2;
   opacity: 1;
 }
 // --------------MEDIA-------------------------------
-// ----------------------1546----------------------------------
+// ----------------------1700----------------------------------
+@media (max-width:1700px) {
+  .reviews__slider::after {
+    width: 160px;
+  }
+  .reviews__slider::before {
+
+    width: 160px;
+  }
+}
+// ----------------------1536----------------------------------
 @media (max-width:1536px) {
   .photo__wrapper {
     justify-content: start;
@@ -903,11 +923,56 @@ left: 40%;
     right: 0;
     bottom: 0;
   }
+  .reviews__title::after {
+    right: 150px;
+  }
+  .reviews__slider::after {
+    width: 110px;
+  }
+  .reviews__slider::before {
+
+    width: 110px;
+  }
+  .reviews__title::before {
+    left: 0;
+  }
 }
+
+
+// ----------------------1424----------------------------------
+@media (max-width:1424px) {
+  .reviews__slider::after {
+    width: 65px;
+  }
+  .reviews__slider::before {
+
+    width: 65px;
+  }
+  .reviews__title::after {
+    right: 50px;
+  }
+}
+
+// ----------------------1312----------------------------------
+@media (max-width:1312px) {
+  .reviews__slider::after {
+    display: none;
+  }
+  .reviews__slider::before {
+
+    display: none;
+  }
+  .reviews__title::after {
+    right: 0px;
+  }
+}
+
 // ----------------------1053----------------------------------
 @media (max-width:1053px) {
   .reviews__slider  {
-    padding: 70px;
+    padding: 10px;
+    border-radius: 8px;
+    
   }
   .footer__inner-forma-block {
     flex-direction: column;
@@ -920,6 +985,12 @@ left: 40%;
     left: 25%;
     right: 0;
     bottom: 0;
+  }
+  .reviews__title::after {
+    display: none;
+  }
+  .reviews__title::before {
+    top: 50px;
   }
 }
 // ----------------------946----------------------------------
@@ -942,11 +1013,18 @@ left: 40%;
     left: 50%;
   }
   .reviews__slider  {
-    padding: 30px;
+    padding: 10px;
+  }
+  .reviews__slide-inner {
+    padding: 40px 150px;
   }
   .reviews__slide-text {
     font-size: 22px;
   }
+  .reviews__slide {
+    padding: 0 143px;
+  }
+
   .reviews__slide-description {
     font-size: 12px;
   }
@@ -966,6 +1044,7 @@ left: 40%;
         right: 0;
         bottom: 0;
       }
+      
 }
 // ----------------------676----------------------------------
 @media (max-width:676px) {
@@ -1010,6 +1089,7 @@ font-size: 18px;
   font-size: 30px;
   line-height: 45px;
 }
+
 .reviews__slide-inner {
   flex-direction: column;
   justify-content: center;
@@ -1053,8 +1133,19 @@ font-size: 18px;
             right: 0;
             bottom: 0;
           }
+          .reviews__title::before {
+            display: none;
+          }
+          .reviews__slide-inner {
+            padding: 30px 200px;
+          }
 }
-
+// ----------------------550----------------------------------
+@media (max-width:550px) {
+  .reviews__slide-inner {
+    padding: 30px 280px;
+  }
+}
 
 // ----------------------471----------------------------------
 @media (max-width:471px) {
@@ -1155,6 +1246,9 @@ font-size: 18px;
           left: 5%;
           right: 0;
           bottom: 0;
+        }
+        .reviews__slide-inner {
+          padding: 10px 320px;
         }
 }
 

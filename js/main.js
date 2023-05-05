@@ -7,16 +7,15 @@ $('.reviews__slider').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+  variableWidth: true,
         centerMode: true,
         centerPadding: '0px',
-        slidesToShow: 3
+        slidesToShow: 1
       }
     },
     {
       breakpoint: 480,
       settings: {
-        arrows: false,
         centerMode: true,
         centerPadding: '0px',
         slidesToShow: 1
