@@ -458,17 +458,19 @@ z-index: 20;
     }
   }
   &__slide {
-
+    // border: 2px solid #E2EAF2;
+    box-shadow: 2px 8px 16px rgba(194, 198, 208, 0.06);
+border-radius: 5px;
   }
   &__slider {
     position: relative;    
     display: flex;
     align-items: center;
     min-width: 0px;
-    border: 2px solid #E2EAF2;
     box-shadow: 2px 8px 16px rgba(194, 198, 208, 0.06);
-border-radius: 5px;
-background: #FFFFFF;
+    border-radius: 5px;
+    // border: 2px solid #E2EAF2;
+// background: #FFFFFF;
   }
   .slick-track {
     position: relative;
@@ -497,7 +499,7 @@ background: #FFFFFF;
     background-color: #081130;
     opacity: 0.9;
     height: 620px;
-    width: 322px;
+    width: 332px;
     z-index: 10;
   }
   &__slide {
@@ -511,6 +513,7 @@ margin: 0 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
   &__slide-content {
     margin-right: 54px;
@@ -573,7 +576,6 @@ margin-bottom: 30px;
 
 }
 .slick__slide {
-
 
 }
 .reviews__slider .slick-initialized .slick-slider {
@@ -884,14 +886,24 @@ z-index: 2;
   opacity: 1;
 }
 // --------------MEDIA-------------------------------
-// ----------------------1700----------------------------------
-@media (max-width:1700px) {
+// ----------------------1800----------------------------------
+@media (max-width:1800px) {
   .reviews__slider::after {
-    width: 160px;
+    width: 250px;
   }
   .reviews__slider::before {
 
-    width: 160px;
+    width: 250px;
+  }
+}
+// ----------------------1700----------------------------------
+@media (max-width:1700px) {
+  .reviews__slider::after {
+    width: 200px;
+  }
+  .reviews__slider::before {
+
+    width: 200px;
   }
 }
 // ----------------------1536----------------------------------
@@ -927,11 +939,11 @@ left: 40%;
     right: 150px;
   }
   .reviews__slider::after {
-    width: 110px;
+    width: 120px;
   }
   .reviews__slider::before {
 
-    width: 110px;
+    width: 120px;
   }
   .reviews__title::before {
     left: 0;
@@ -972,7 +984,8 @@ left: 40%;
   .reviews__slider  {
     padding: 10px;
     border-radius: 8px;
-    
+        border: 2px solid #ffffff;
+background: #FFFFFF;
   }
   .footer__inner-forma-block {
     flex-direction: column;
